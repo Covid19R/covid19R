@@ -1,3 +1,13 @@
+#' What Datasets are available from covid19R
+#'
+#' @param location_types_filter
+#' @param spatial_extent_filter
+#' @param data_types_filter
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_covid19_data_info <- function(location_types_filter = NULL,
                                   spatial_extent_filter = NULL,
                                   data_types_filter = NULL){
