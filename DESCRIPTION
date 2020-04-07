@@ -1,13 +1,13 @@
 Package: covid19R
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Provides access to the standardized tidy datasets that are part of the covid19R project
+Version: 0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Jarrett",
+           family = "Byrnes",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "jarrett.byrnes@umb.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: The covid19R project regularly queries and updates a variety of different datasets about the spread of covid-19 (SARS-COV-2). This package allows users access to all of the datasets.
 License: GPL-3
 Suggests: 
     testthat
@@ -15,3 +15,5 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
+Imports: 
+    readr
