@@ -2,12 +2,21 @@ Package: covid19R
 Title: Provides access to the standardized tidy datasets that
     are part of the covid19R project
 Version: 0.1.0
-Authors@R: 
+Authors@R: c(
     person(given = "Jarrett",
            family = "Byrnes",
            role = c("aut", "cre"),
            email = "jarrett.byrnes@umb.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "0000-0002-9791-9472")),
+    person(given = "Amanda",
+           family = "Dobbyn",
+           role = c("aut", "cre"),
+           email = "amanda.e.dobbyn@gmail.com"),
+    person(given = "Rami", 
+           family = "Krispin", 
+           role = c("aut", "cre"),
+           email = "rami.krispin@gmail.com")
+    )
 Description: The covid19R project regularly queries and updates
     a variety of different datasets about the spread of covid-19
     (SARS-COV-2). This package allows users access to all of the datasets.
