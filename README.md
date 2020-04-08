@@ -9,6 +9,8 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/covid19R)](https://CRAN.R-project.org/package=covid19R)
+[![Travis build
+status](https://travis-ci.org/Covid19R/covid19R.svg?branch=master)](https://travis-ci.org/Covid19R/covid19R)
 <!-- badges: end -->
 
 The goal of covid19R is to provide a single package that allows users to

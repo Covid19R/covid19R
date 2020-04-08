@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/covid19R)](https://CRAN.R-project.org/package=covid19R)
+[![Travis build status](https://travis-ci.org/Covid19R/covid19R.svg?branch=master)](https://travis-ci.org/Covid19R/covid19R)
 <!-- badges: end -->
 
 The goal of covid19R is to provide a single package that allows users to access all of the tidy covid-19 datasets collected by data packages that implement the covid19R tidy data standard. It provides access
