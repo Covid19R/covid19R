@@ -8,11 +8,15 @@
 #' @export
 #'
 #' @examples
+#' get_covid19_data_info()
+#'
+
 get_covid19_data_info <- function(location_types_filter = NULL,
                                   spatial_extent_filter = NULL,
                                   data_types_filter = NULL){
 
   url <- paste0(repo_url, data_loc, "covid19R_data_info.csv")
+
   dat <- readr::read_csv(url,
                   col_types = list(
                     data_set_name = readr::col_character(),
