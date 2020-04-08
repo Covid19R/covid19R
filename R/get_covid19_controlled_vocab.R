@@ -2,7 +2,7 @@
 #'
 #' @description Many columns of the tidy format for covid19R data use a controlled vocabulary to define standardized types. While you can read more about these in our documentation, this pulls the controlled vocabulary and description for a given vocabulary type.
 #'
-#' @param vocab name of a column from a dataset pulled from \code{\link{get_covid_19_dataset}} or a data type listed in \code{\link{get_covid19_data_info}}
+#' @param vocab name of a column from a dataset pulled from \code{\link{get_covid19_dataset}} or a data type listed in \code{\link{get_covid19_data_info}}
 #'
 #' @return a tibble with information about approved controlled vocabulary terms and their description
 #' @export

@@ -7,7 +7,7 @@
 get_covid19_controlled_vocab(vocab)
 }
 \arguments{
-\item{vocab}{name of a column from a dataset pulled from \code{\link{get_covid_19_dataset}} or a data type listed in \code{\link{get_covid19_data_info}}}
+\item{vocab}{name of a column from a dataset pulled from \code{\link{get_covid19_dataset}} or a data type listed in \code{\link{get_covid19_data_info}}}
 }
 \value{
 a tibble with information about approved controlled vocabulary terms and their description
