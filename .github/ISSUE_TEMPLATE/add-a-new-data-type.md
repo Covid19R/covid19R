@@ -9,7 +9,7 @@ assignees: ''
 
 Please include the following information:
 
-- A one word name for the data type  For examples, see [here](https://covid19r.github.io/documentation/standardized-vocabulary.html#current-data-types). If this is for a cummulative measure (e.g., total cases), append `_total` to it (e.g., cases_total). If it is new occurrences, append `_new`, (e.g., recovered_new).
+- A one word name for the data type  For examples, see [here](https://covid19r.github.io/documentation/standardized-vocabulary.html#current-data-types). If this is for a cummulative measure (e.g., total cases), append `_total` to it (e.g., cases_total). If it is new occurrences, append `_new`, (e.g., recovered_new). If it is a current number of something that can either increase or decrease (e.g., number of available hospital beds), use `_current`.
 
 - A description of what the data type means
 
