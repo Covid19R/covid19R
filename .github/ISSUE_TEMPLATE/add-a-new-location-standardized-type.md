@@ -1,6 +1,6 @@
 ---
 name: Add a new location standardized type
-about: Describe this issue template's purpose here.
+about: Add a new standardized location type to our standardized vocabulary
 title: ''
 labels: standardized vocabulary
 assignees: ''

@@ -1,6 +1,6 @@
 ---
 name: Add a new location type
-about: To add a new location type
+about: Add a new location type to our standardized vocabulary
 title: ''
 labels: standardized vocabulary
 assignees: ''
