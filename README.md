@@ -112,25 +112,25 @@ columns and are arranged in a long format:
   - location\_type - The type of location using the covid19R controlled
     vocabulary. Nested locations are indicated by multiple location
     types being combined with a \`\_
-  - location\_standardized - A standardized location code using a
-    national or international standard. In this case, FIPS state or
-    county codes. See
+  - location\_code - A standardized location code using a national or
+    international standard. In this case, FIPS state or county codes.
+    See
     <https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code>
     and <https://en.wikipedia.org/wiki/FIPS_county_code> for more
-  - location\_standardized\_type The type of standardized location code
-    being used according to the covid19R controlled vocabulary. Here we
-    use `fips_code`
+  - location\_code\_type The type of standardized location code being
+    used according to the covid19R controlled vocabulary. Here we use
+    `fips_code`
   - data\_type - the type of data in that given row. Includes
     `total_cases` and `total_deaths`, cumulative measures of both.
   - value - number of cases of each data type
 
 ## Vocabularies
 
-The `location_type`, `location_standardized_type`, and `data_type` from
-datasets and `spatial_extent` from the data info table all have their
-own controlled vocabularies. Others might be introduced as the
-collection of packages matures. To see the possible values of a
-standardized vocabulary, use `get_covid19_controlled_vocab()`
+The `location_type`, `location_code_type`, and `data_type` from datasets
+and `spatial_extent` from the data info table all have their own
+controlled vocabularies. Others might be introduced as the collection of
+packages matures. To see the possible values of a standardized
+vocabulary, use `get_covid19_controlled_vocab()`
 
 ``` r
 get_covid19_controlled_vocab("location_type") %>%
@@ -144,3 +144,4 @@ get_covid19_controlled_vocab("location_type") %>%
 | state          | a spatial area inside that country such as a state, province, canton, etc.    |
 | county         | a spatial area demarcated within a state                                      |
 | city           | a single municipality - the smallest spatial grain of government in a country |
+| canton         | the cantons of Switzerland and Principality of Liechtenstein (FL)             |
