@@ -1,8 +1,8 @@
 ---
-name: Starting to Develop a New Data Package for the Project
+name: Starting to develop a new data package for the project
 about: Help users who want to develop a new data package
 title: ''
-labels: ''
+labels: starting new data package
 assignees: ''
 
 ---
