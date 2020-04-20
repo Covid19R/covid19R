@@ -15,7 +15,14 @@
 get_covid19_controlled_vocab <- function(vocab) {
   url <- paste0(repo_url, vocab_loc, vocab, ".csv")
 
+  col_type <- "cc"
+
+  if(vocab %in% c("location_code_type")){
+    col_type <- "ccc"
+
+  }
+
   readr::read_csv(url,
-    col_type = "cc"
+    col_type = col_type
   )
 }
