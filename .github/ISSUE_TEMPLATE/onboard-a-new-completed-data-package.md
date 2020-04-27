@@ -1,9 +1,9 @@
 ---
-name: Onboard a new data package
+name: Onboard a new completed data package
 about: Fill out this form to have your data form that returns tidy covid-19 data added
   to covid19R
 title: ''
-labels: ''
+labels: onboarding new data package
 assignees: ''
 
 ---
