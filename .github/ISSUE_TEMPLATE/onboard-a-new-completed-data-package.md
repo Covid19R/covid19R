@@ -16,6 +16,7 @@ Package github repo:
 Data source URL:
 License of Data:
 URL for Full information about Data Source:
+Packages imported:
 Do you want this package to be moved to the covid19R organization:
 Additional data columns returned beyond the tidy data standard specified in https://github.com/Covid19R/documentation
 
