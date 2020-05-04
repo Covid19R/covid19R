@@ -15,7 +15,12 @@ status](https://travis-ci.org/Covid19R/covid19R.svg?branch=master)](https://trav
 
 The goal of covid19R is to provide a single package that allows users to
 access all of the tidy covid-19 datasets collected by data packages that
-implement the covid19R tidy data standard. It provides access
+implement the covid19R tidy data standard. It provides access to
+multiple data sets that meet a tidy data standard.
+
+To learn more abou the Covid19R project, check [our extensive
+documentation](https://covid19r.github.io/documentation) about data
+standards, how to get your data added to this list, and more.
 
 ## Installation
 
@@ -43,15 +48,18 @@ To see what datasets are available, use `get_covid19_data_info()`
 library(covid19R)
 
 data_info <- get_covid19_data_info()
+#> Warning: The following named parsers don't match the column names: last_update
 
 head(data_info) %>% knitr::kable()
 ```
 
-| data\_set\_name          | package\_name  | function\_to\_get\_data           | data\_details                                                                                                                                                                                                                                                     | data\_url                                                                             | license\_url                                                   | data\_types                                               | location\_types | spatial\_extent | has\_geospatial\_info | refresh\_status | last\_update |
-| :----------------------- | :------------- | :-------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ | :------------------------------------------------------------- | :-------------------------------------------------------- | :-------------- | :-------------- | :-------------------- | :-------------- | :----------- |
-| covid19nytimes\_states   | covid19nytimes | refresh\_covid19nytimes\_states   | Open Source data from the New York Times on distribution of confirmed Covid-19 cases and deaths in the US States. For more, see <https://www.nytimes.com/article/coronavirus-county-data-us.html> or the readme at <https://github.com/nytimes/covid-19-data>.    | <https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv>      | <https://github.com/nytimes/covid-19-data/blob/master/LICENSE> | cases\_total, deaths\_total                               | state           | country         | FALSE                 | Passed          | 2020-04-03   |
-| covid19nytimes\_counties | covid19nytimes | refresh\_covid19nytimes\_counties | Open Source data from the New York Times on distribution of confirmed Covid-19 cases and deaths in the US by County. For more, see <https://www.nytimes.com/article/coronavirus-county-data-us.html> or the readme at <https://github.com/nytimes/covid-19-data>. | <https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv>      | <https://github.com/nytimes/covid-19-data/blob/master/LICENSE> | cases\_total, deaths\_total                               | county, state   | country         | FALSE                 | Passed          | 2020-04-03   |
-| covid19france            | covid19france  | refresh\_covid19france            | Open Source data from opencovid19-fr on distribution of confirmed Covid-19 cases and deaths in the US States. For more, see <https://github.com/opencovid19-fr/data>.                                                                                             | <https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv> | <https://github.com/opencovid19-fr/data/blob/master/LICENSE>   | confirmed, dead, icu, hospitalized, recovered, discovered | NA              | NA              | FALSE                 | Passed          | 2020-04-04   |
+| data\_set\_name          | package\_name  | function\_to\_get\_data           | data\_details                                                                                                                                                                                                                                                     | data\_url                                                                             | license\_url                                                    | data\_types                                                                                                                                                                                                                                                                                                                                                  | location\_types                                | spatial\_extent | has\_geospatial\_info | get\_info\_passing | refresh\_status | last\_refresh\_update |
+| :----------------------- | :------------- | :-------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ | :-------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------- | :-------------- | :-------------------- | :----------------- | :-------------- | :-------------------- |
+| covid19nytimes\_states   | covid19nytimes | refresh\_covid19nytimes\_states   | Open Source data from the New York Times on distribution of confirmed Covid-19 cases and deaths in the US States. For more, see <https://www.nytimes.com/article/coronavirus-county-data-us.html> or the readme at <https://github.com/nytimes/covid-19-data>.    | <https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv>      | <https://github.com/nytimes/covid-19-data/blob/master/LICENSE>  | cases\_total, deaths\_total                                                                                                                                                                                                                                                                                                                                  | state                                          | country         | FALSE                 | TRUE               | Passed          | 2020-05-04 16:08:36   |
+| covid19nytimes\_counties | covid19nytimes | refresh\_covid19nytimes\_counties | Open Source data from the New York Times on distribution of confirmed Covid-19 cases and deaths in the US by County. For more, see <https://www.nytimes.com/article/coronavirus-county-data-us.html> or the readme at <https://github.com/nytimes/covid-19-data>. | <https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv>      | <https://github.com/nytimes/covid-19-data/blob/master/LICENSE>  | cases\_total, deaths\_total                                                                                                                                                                                                                                                                                                                                  | state                                          | country         | FALSE                 | TRUE               | Passed          | 2020-05-04 16:08:39   |
+| covid19france            | covid19france  | refresh\_covid19france            | Open Source data from opencovid19-fr on distribution of confirmed Covid-19 cases and deaths in the US States. For more, see <https://github.com/opencovid19-fr/data>.                                                                                             | <https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.csv> | <https://github.com/opencovid19-fr/data/blob/master/LICENSE>    | confirmed, dead, icu, hospitalized, recovered, discovered                                                                                                                                                                                                                                                                                                    | county, region, country, overseas collectivity | country         | FALSE                 | TRUE               | Passed          | 2020-05-04 16:08:47   |
+| CanadaC19\_cases         | CanadaC19      | refresh\_CanadaC19\_cases         | Open Source data from multiple public reporting data throughout Canada. For more, see <https://github.com/ishaberry/Covid19Canada>.                                                                                                                               | <https://raw.githubusercontent.com/ishaberry/Covid19Canada/master/cases.csv>          | <https://github.com/debusklaneml/CanadaC19/blob/master/LICENSE> | cases\_new                                                                                                                                                                                                                                                                                                                                                   | state                                          | state           | FALSE                 | TRUE               | Passed          | 2020-05-04 16:08:48   |
+| covid19us                | covid19us      | refresh\_covid19us                | Open Source data from COVID Tracking Project on the distribution of Covid-19 cases and deaths in the US. For more, see <https://github.com/opencovid19-fr/data>.                                                                                                  | <https://covidtracking.com/api>                                                       | <https://github.com/aedobbyn/covid19us/blob/master/LICENSE.md>  | positive, negative, pending, hospitalized\_currently, hospitalized\_cumulative, in\_icu\_currently, in\_icu\_cumulative, on\_ventilator\_currently, on\_ventilator\_cumulative, recovered, death, hospitalized, total, total\_test\_results, death\_increase, hospitalized\_increase, negative\_increase, positive\_increase, total\_test\_results\_increase | state                                          | country         | FALSE                 | TRUE               | Passed          | 2020-05-04 16:08:50   |
 
 ## Accessing data
 
@@ -75,8 +83,8 @@ nytimes_states <- get_covid19_dataset("covid19nytimes_states")
 #>   date = col_date(format = ""),
 #>   location = col_character(),
 #>   location_type = col_character(),
-#>   location_standardized = col_character(),
-#>   location_standardized_type = col_character(),
+#>   location_code = col_character(),
+#>   location_code_type = col_character(),
 #>   data_type = col_character(),
 #>   value = col_double()
 #> )
@@ -87,14 +95,14 @@ nytimes_states %>%
   arrange(desc(value)) %>%
   head()
 #> # A tibble: 6 x 7
-#>   date       location location_type location_standa… location_standa… data_type
-#>   <date>     <chr>    <chr>         <chr>            <chr>            <chr>    
-#> 1 2020-04-03 New York state         36               fips_code        cases_to…
-#> 2 2020-04-03 New Jer… state         34               fips_code        cases_to…
-#> 3 2020-04-03 Michigan state         26               fips_code        cases_to…
-#> 4 2020-04-03 Califor… state         06               fips_code        cases_to…
-#> 5 2020-04-03 Massach… state         25               fips_code        cases_to…
-#> 6 2020-04-03 Louisia… state         22               fips_code        cases_to…
+#>   date       location location_type location_code location_code_t… data_type
+#>   <date>     <chr>    <chr>         <chr>         <chr>            <chr>    
+#> 1 2020-05-03 New York state         36            fips_code        cases_to…
+#> 2 2020-05-03 New Jer… state         34            fips_code        cases_to…
+#> 3 2020-05-03 Massach… state         25            fips_code        cases_to…
+#> 4 2020-05-03 Illinois state         17            fips_code        cases_to…
+#> 5 2020-05-03 Califor… state         06            fips_code        cases_to…
+#> 6 2020-05-03 Pennsyl… state         42            fips_code        cases_to…
 #> # … with 1 more variable: value <dbl>
 ```
 

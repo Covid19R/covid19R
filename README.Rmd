@@ -21,7 +21,9 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/Covid19R/covid19R.svg?branch=master)](https://travis-ci.org/Covid19R/covid19R)
 <!-- badges: end -->
 
-The goal of covid19R is to provide a single package that allows users to access all of the tidy covid-19 datasets collected by data packages that implement the covid19R tidy data standard. It provides access
+The goal of covid19R is to provide a single package that allows users to access all of the tidy covid-19 datasets collected by data packages that implement the covid19R tidy data standard. It provides access to multiple data sets that meet a tidy data standard.
+
+To learn more abou the Covid19R project, check [our extensive documentation](https://covid19r.github.io/documentation) about data standards, how to get your data added to this list, and more.
 
 ## Installation
 
