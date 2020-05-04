@@ -48,7 +48,6 @@ To see what datasets are available, use `get_covid19_data_info()`
 library(covid19R)
 
 data_info <- get_covid19_data_info()
-#> Warning: The following named parsers don't match the column names: last_update
 
 head(data_info) %>% knitr::kable()
 ```
