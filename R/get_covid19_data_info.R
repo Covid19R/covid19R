@@ -2,9 +2,15 @@
 #'
 #' @description Returns information about the datasets available from covid19R
 #'
-#' @param location_types_filter A vector of location types that you would like to include. Other location types will be removed. Defaults to `NULL`, and no filtering is done. See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.
-#' @param spatial_extent_filter A vector of spatial extents that you would like to include. Other extents will be removed. Defaults to `NULL`, and no filtering is done. See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.
-#' @param data_types_filter A vector of data types that you would like to include. Other data types will be removed. Defaults to `NULL`, and no filtering is done. See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.
+#' @param location_types_filter A vector of location types that you would like to include.
+#' Other location types will be removed. Defaults to `NULL`, and no filtering is done.
+#' See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.
+#' @param spatial_extent_filter A vector of spatial extents that you would like to include.
+#' Other extents will be removed. Defaults to `NULL`, and no filtering is done.
+#' See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.
+#' @param data_types_filter A vector of data types that you would like to include.
+#' Other data types will be removed. Defaults to `NULL`, and no filtering is done.
+#' See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.
 #'
 #' @return A tibble listing what datasets are available, and additional information about them.
 #' @export
