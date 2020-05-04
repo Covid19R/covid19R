@@ -35,7 +35,7 @@ get_covid19_data_info <- function(location_types_filter = NULL,
       spatial_extent = readr::col_character(),
       has_geospatial_info = readr::col_logical(),
       refresh_status = readr::col_character(),
-      last_update = readr::col_datetime(format = "")
+      last_refresh_update = readr::col_datetime(format = "")
     )
   )
 
