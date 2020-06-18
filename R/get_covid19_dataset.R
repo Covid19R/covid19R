@@ -13,7 +13,18 @@
 #'
 #' tail(nytimes_states)
 get_covid19_dataset <- function(dataset) {
-  url <- paste0(repo_url, data_loc, dataset, ".csv")
 
-  readr::read_csv(url)
+  #setup what we are doing
+  filename <- paste0(dataset, ".rds")
+  url <- paste0(repo_url, data_loc, filename)
+
+  #download and read file
+  download.file(url, paste0(dataset, ".rds"))
+  ret <- base::readRDS(filename)
+
+  #cleanup
+  unlink(filename)
+
+  #return
+  ret
 }
