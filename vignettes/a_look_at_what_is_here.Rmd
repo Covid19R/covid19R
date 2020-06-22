@@ -14,9 +14,9 @@ knitr::opts_chunk$set(
   )
 ```
 
-As of last check, what data sets are here?
+As of `Sys.Date()`, what data sets does Covid19R provide?
 
-```{r setup}
+```{r show_data}
 library(covid19R)
 library(DT)
 dat <- get_covid19_data_info()
