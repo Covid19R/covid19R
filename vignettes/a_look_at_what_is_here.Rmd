@@ -1,0 +1,24 @@
+---
+title: "A look a what data is available"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{A look a what data is available}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+  )
+```
+
+As of last check, what data sets are here?
+
+```{r setup}
+library(covid19R)
+library(DT)
+dat <- get_covid19_data_info()
+datatable(dat, class = 'compact cell-border stripe')
+```
