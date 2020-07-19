@@ -11,11 +11,17 @@ get_covid19_data_info(
 )
 }
 \arguments{
-\item{location_types_filter}{A vector of location types that you would like to include. Other location types will be removed. Defaults to \code{NULL}, and no filtering is done. See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.}
+\item{location_types_filter}{A vector of location types that you would like to include.
+Other location types will be removed. Defaults to \code{NULL}, and no filtering is done.
+See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.}
 
-\item{spatial_extent_filter}{A vector of spatial extents that you would like to include. Other extents will be removed. Defaults to \code{NULL}, and no filtering is done. See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.}
+\item{spatial_extent_filter}{A vector of spatial extents that you would like to include.
+Other extents will be removed. Defaults to \code{NULL}, and no filtering is done.
+See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.}
 
-\item{data_types_filter}{A vector of data types that you would like to include. Other data types will be removed. Defaults to \code{NULL}, and no filtering is done. See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.}
+\item{data_types_filter}{A vector of data types that you would like to include.
+Other data types will be removed. Defaults to \code{NULL}, and no filtering is done.
+See \code{\link{get_covid19_controlled_vocab}} for how to see possible values.}
 }
 \value{
 A tibble listing what datasets are available, and additional information about them.
@@ -25,5 +31,4 @@ Returns information about the datasets available from covid19R
 }
 \examples{
 get_covid19_data_info()
-
 }

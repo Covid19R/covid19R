@@ -7,16 +7,20 @@
 get_covid19_controlled_vocab(vocab)
 }
 \arguments{
-\item{vocab}{name of a column from a dataset pulled from \code{\link{get_covid19_dataset}} or a data type listed in \code{\link{get_covid19_data_info}}}
+\item{vocab}{name of a column from a dataset pulled from \code{\link{get_covid19_dataset}}
+or a data type listed in \code{\link{get_covid19_data_info}}}
 }
 \value{
-a tibble with information about approved controlled vocabulary terms and their description
+a tibble with information about approved controlled vocabulary terms and their
+description
 }
 \description{
-Many columns of the tidy format for covid19R data use a controlled vocabulary to define standardized types. While you can read more about these in our documentation, this pulls the controlled vocabulary and description for a given vocabulary type.
+Many columns of the tidy format for covid19R data use a controlled
+vocabulary to define standardized types. While you can read more about these in our
+documentation, this pulls the controlled vocabulary and description for a given vocabulary
+type.
 }
 \examples{
 
 get_covid19_controlled_vocab("data_type")
-
 }

@@ -1,6 +1,6 @@
-pandoc: 2.3.1
-pkgdown: 1.5.1
+pandoc: 2.9.2.1
+pkgdown: 1.3.0
 pkgdown_sha: ~
-articles: []
-last_built: 2020-05-04T19:48Z
+articles:
+  a_look_at_what_is_here: a_look_at_what_is_here.html
 

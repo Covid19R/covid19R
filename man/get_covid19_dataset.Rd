@@ -20,5 +20,4 @@ Fetches a chosen tidy dataset from the covid19R catalogue
 nytimes_states <- get_covid19_dataset("covid19nytimes_states")
 
 tail(nytimes_states)
-
 }
